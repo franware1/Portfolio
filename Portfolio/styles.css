@@ -1,16 +1,38 @@
-body{
-    color: #000000;
-    background-color: #DEDEDE;
+.tabs{
+    
 }
 
-img{
-    border:#000000;
+body{
+    background: #000000;
 }
 
 h1{
+    p{
     font-family: 'Recoleta', sans-serif;
+    color: #DEDEDE;
+    font-size: 100px;
+    }
 }
 
 h2{
     font-family: 'Recoleta', sans-serif;
+    color: #DEDEDE;
+}
+
+h3{
+    color: #DEDEDE;
+}
+
+p{
+    font-family: 'Arial';
+    color: #DEDEDE
+}
+
+a{
+    font-family: 'Arial';
+    color: #DEDEDE;
+}
+
+.projects{
+
 }
