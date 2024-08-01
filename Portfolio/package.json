@@ -1,0 +1,18 @@
+{
+  "name": "personal-porfolio",
+  "version": "1.0.0",
+  "description": "Francisco Vu's Portfolio Webpage.",
+  "main": "index.js",
+  "respository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francisco Vu",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
