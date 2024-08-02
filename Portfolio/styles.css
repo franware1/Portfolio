@@ -81,7 +81,7 @@ body{
 }
 
 nav{
-    position: relative;
+    position: absolute;
     top: 50px;
     max-width: 1920px;
     margin-left: 7.5vw;
@@ -90,27 +90,38 @@ nav{
     font-size: 40px;
     font-family: inherit;
 
-    a{
-        align-items: end ;
-        text-decoration: none;
-        margin-right: 50px;
-        color: inherit;
-    }
-
-    button{
-        text-decoration: none;
-        margin-right: 50px;
-        color: inherit;
-        outline: 0;
-        outline-color: #000000;
-        font-family: inherit;
-        font-size: inherit;
-        background-color: #000000;
-    }
-    
 }
 
-h1{
+nav a{
+    /* There was a bug here where the underline animation would go over the top of all the links*/
+    /* Making the position relative means that the nav a::after would be positioned absolutely RELATIVE to its parent */
+    position: relative;
+    align-items: end ;
+    text-decoration: none;
+    margin-right: 50px;
+    color: inherit;
+    padding-bottom: .75rem;
+}
+
+/* Underline the navigation links */ 
+nav a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fbf4ec;
+    transition: all .7s ease;
+    }
+
+nav a:hover::after {
+    width: 100%
+}
+
+/* ===============================*/
+
+header h1{
     margin-top: 300px;
     margin-left: 15vw;
     p{
@@ -122,7 +133,7 @@ h1{
 }
 
 h2{
-    margin-top: ;
+    margin-top: inherit;
     margin-left: 5vw;
     font-size: 72px;
 }
@@ -131,23 +142,21 @@ h3{
     font-size: 48px;
 }
 
-p{
-    font-size: 20px;
-    font-family: 'Arial';
-    color: inherit;
-    margin-left: 2rem;
-    margin-right: 5rem;
-}
+main {
+    p{
+        font-size: 20px;
+        font-family: 'Arial';
+        color: inherit;
+        margin-left: 2rem;
+        margin-right: 5rem;
+    }
 
-.projects{
-}
-
-.section{
+    
     a{
         
         margin-right: 100px;
         font-size: 28px;
         color:#fbf4ec;
-        text-decoration: ;
+        text-decoration: none;
     }
 }
