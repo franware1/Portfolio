@@ -1,4 +1,65 @@
+
+/* =================================================================
+For different screen sizes
+==================================================================*/
+
+/*
+@media (max-width: 320px) {
+    body{
+        position: relative;
+        height: 100%;
+        margin: 0;
+        font-family: 'Recoleta', sans-serif;
+        background-color: #000000;
+        color: #d8bb9a;  
+        font-size: 100px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    body{
+        max-width: 600px;
+        position: relative;
+        height: 100%;
+        margin: 0;
+        font-family: 'Recoleta', sans-serif;
+        background-color: #000000;
+        color: #fbf4ec;  
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 1280px) {
+    body{
+        max-width: 1280px;
+        position: relative;
+        height: 100%;
+        margin: 0;
+        font-family: 'Recoleta', sans-serif;
+        background-color: #000000;
+        color: #fbf4ec;  
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 1440px) {
+    body{
+        max-width: 1440px;
+        position: relative;
+        height: 100%;
+        margin: 0;
+        font-family: 'Recoleta', sans-serif;
+        background-color: #000000;
+        color: #fbf4ec;  
+        font-size: 100px;
+    }
+}
+*/
+
 body{
+    max-width: 1366px;
+    min-width: 768px;
     position: relative;
     height: 100%;
     margin: 0;
@@ -10,8 +71,6 @@ body{
 
 .tabs{
     position: relative;
-    margin-top: 0;
-    margin-left: 100px;
     top: 50px;
     left: 800px;
     width: 1920px;
@@ -21,6 +80,7 @@ body{
     font-family: inherit;
 
     a{
+        align-items: end;
         text-decoration: none;
         margin-right: 40px;
         color: inherit;
@@ -31,6 +91,7 @@ body{
         color: inherit;
         margin-right: 40px;
         outline: 0;
+        outline-color: #000000;
         font-family: inherit;
         font-size: inherit;
         background-color: #000000;
@@ -70,6 +131,9 @@ p{
 
 .section{
     a{
+        
+        margin-right: 100px;
+        font-size: 28px;
         color:#fbf4ec;
         text-decoration: ;
     }
