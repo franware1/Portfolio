@@ -121,6 +121,18 @@ nav a:hover::after {
 
 /* ===============================*/
 
+    button{
+        text-decoration: none;
+        margin-right: 50px;
+        color: inherit;
+        outline: 0;
+        outline-color: #000000;
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #000000;
+    }
+    
+
 header h1{
     margin-top: 300px;
     margin-left: 15vw;
