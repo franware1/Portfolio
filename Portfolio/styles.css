@@ -133,7 +133,7 @@ nav a:hover::after {
     }
     
 
-header h1{
+h1{
     margin-top: 300px;
     margin-left: 15vw;
     p{
@@ -142,7 +142,6 @@ header h1{
         color: inherit;
         font-size: 150px;
     }
-
 }
 
 h2{
@@ -152,6 +151,7 @@ h2{
 }
 
 h3{
+    margin-left: 5vw;
     font-size: 48px;
 }
 
