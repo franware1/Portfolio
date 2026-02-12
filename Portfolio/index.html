@@ -1,80 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francisco Vu</title>
+  </head>
 
-<head>
-    <!--The head is not meant for display but it tells the broswer and the search engine IMPORTANT informationa about the webpage-->
-    <!--This line of code is to tell the browser which charset which is the style of keyboard that is used to code this page.-->
-    <!--UTF-8 (Unicode Transformation Format 8) is a character encoding standard that represents characters using one to four bytes-->
-    <meta charset="UTF-8">
-
-    <!--This initializes the viewport-->
-    <!--It indicates the browser to not zoom in on the page and should respect any responsive CSS code-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Title of the website-->
-    <title>Francisco Vu - Software Engineer</title>
-
-    <!--Linking the styles of the webpage to the css file named styles in this folder-->
-    <link rel="stylesheet" href="styles.css">
-
-    <!--Importing the font-->
-    <link href="https://fonts.cdnfonts.com/css/recoleta" rel="stylesheet">
-    <style>
-    @import url('https://fonts.cdnfonts.com/css/recoleta');
-    </style>
-
-</head>
-
-<!--The body is the content of the html file-->
-<body>
-    <!--This is a header-->
-    <header>
-        <nav class="tabs">
-                <a href="#aboutme">About me</a></li>
-                <a href="#projects">Projects</a> 
-                <a href="javascript:void(0)">Resume</a> 
-                <a href="#contact">Contact me!</a>    
-        </nav>
-
-        <h1>
-            <p>Hello, my name is</p>
-            <p>Francisco.</p>           
-        </h1>
-    </header>
-
-    <main>
-        <section id="aboutme">
-            <h2>About me</h2>
-            <p>I am currently an undergraduate student at the University of Massachusetts Boston pursuing a Bachelor of Science degree in Computer science.</p>
-            <p>Born and raised in Massachusetts, I have lived just outside the city of Boston my entire life. As a young boy, I developed an affinity and passion for the computer sciences, programming my first large language model at the age of 3</p>
-            <p>Goldman sachs contacted me about a potential "internship". I got "rejected" but of course I was a mere 4 and half years of age</p>
-        </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>Yea so I know like C, C++, Python, Ruby, Go, Mojo, Javascript, Typescript, SQL, Nodejs, React, and I created actually a programming language known as Pipes, and I can code assembly, I invented blinking LEDs</p> 
-                <div>
-                    <h3>Project 1</h3>
-                    <a class="gitlink" href="#">Project One</a>
-                    <p>Project1-description</p>
-
-                    <h3>Project 2</h3>
-                    <a class="gitlink" href="#">Project One</a>     
-                    <p>Project2-description</p>
-                </div>
-        </section>
-
-        <section id="contact">
-            <p>Here are all of my links and contact information!</p>
-            <div>
-                <a href="https://github.com/franware1">Github</a>
-                <a href="mailto:franvu225@gmail.com">Gmail</a>
-                <a href="www.linkedin.com/in/franvu225">LinkedIn</a>
-                <a href="https://twitter.com/thefranware">Twitter</a>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-</body>
+  
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
