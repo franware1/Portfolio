@@ -1,11 +1,30 @@
+/* FONTS */
+@font-face {
+  font-family: 'HEADERF';
+  src: url("../../public/fonts/RRRClimax-100.woff2") format("woff2");
+  font-weight: normal;
+}
 
+@font-face {
+  font-family: 'BODYF';
+  src: url("../../public/fonts/") format("woff2");
+  font-weight: normal;
+}
+
+
+/* PACKAGES */
 @import "tailwindcss"
 
+/* DESIGN TOKENS */
 
-:root {
-  --color-bg: #fcd62c;
-  --color-accent: #ff4d00;
-  --color-text: #000000;
-  --font-display: 'YourDisplayFont', sans-serif;
-  --font-body: 'YourBodyFont', sans-serif;
-}
+/* BASE STYLES */
+
+/* TYPOGRAPHY DEFAULTS */
+
+/* GLOBAL LAYOUT */
+
+/* GLOBAL COMPONENT STYLES */
+
+/* ANIMATIONS AND KEYFRAMES */
+
+/* UTILITES */
