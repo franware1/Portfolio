@@ -1,0 +1,13 @@
+2026-04-08
+─────────────────────────────────────────────
+- Explored project structure: React 19 + TypeScript + Vite + Tailwind CSS v4 + React Router v7 + Bootstrap 5.
+- Generated CLAUDE.md at project root documenting dev commands and architecture.
+- Fixed broken Bootstrap imports in src/main.tsx (removed ./node_modules/ prefixed paths and duplicate npm imports; Bootstrap already loaded via CDN in index.html).
+- Cleaned up unused imports in src/main.tsx.
+- Wired up both custom fonts via @font-face in styles.css (RRRClimax-100.woff2, PlayfairDisplay-Medium.woff2).
+- Registered custom colors and fonts in Tailwind v4 @theme block (bg-bg, text-accent, text-text).
+- Built out landing.tsx skeleton: navbar with nav links, hero section with fluid vw-based typography, CTA buttons, and footer.
+- Adjusted layout: moved nav links to left side, removed "Francisco Vu" header from navbar, removed border separators between navbar/hero/footer.
+- Set all sizing and spacing to viewport-relative units (vw/vh) for fluid scaling.
+- Set consistent horizontal padding of 8vw across all sections for ~1–2 inch page margins.
+

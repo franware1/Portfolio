@@ -1,11 +1,36 @@
+@import "tailwindcss";
 
-@import "tailwindcss"
+@font-face {
+  font-family: 'RRRClimax';
+  src: url('/assets/fonts/RRRClimax-100.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/assets/fonts/PlayfairDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
 
-:root {
+@theme {
   --color-bg: #fcd62c;
   --color-accent: #ff4d00;
   --color-text: #000000;
-  --font-display: 'YourDisplayFont', sans-serif;
-  --font-body: 'YourBodyFont', sans-serif;
+
+  --font-display: 'RRRClimax', sans-serif;
+  --font-body: 'PlayfairDisplay', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
 }
