@@ -34,3 +34,34 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
 }
+
+/* FONTS */
+@font-face {
+  font-family: 'HEADERF';
+  src: url("../../public/fonts/RRRClimax-100.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'BODYF';
+  src: url("../../public/fonts/") format("woff2");
+  font-weight: normal;
+}
+
+
+/* PACKAGES */
+@import "tailwindcss"
+
+/* DESIGN TOKENS */
+
+/* BASE STYLES */
+
+/* TYPOGRAPHY DEFAULTS */
+
+/* GLOBAL LAYOUT */
+
+/* GLOBAL COMPONENT STYLES */
+
+/* ANIMATIONS AND KEYFRAMES */
+
+/* UTILITES */

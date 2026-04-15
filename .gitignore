@@ -1,19 +1,16 @@
-# Byte-code files
 *.pyc
 __pycache__/
 
-# Dependencies
 venv/
 env/
 node_modules/
+.woff2
 
-# OS-specific files (optional, can go in global gitignore)
 .DS_Store
 
-# Logs and databases
 *.log
 *.sqlite3-journal
 
-# Secrets
 .env
 config.ini
+.json
