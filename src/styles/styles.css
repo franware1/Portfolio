@@ -1,67 +1,156 @@
-@import "tailwindcss";
+ /* styles.css */
+
+ /* FONTS */
 
 @font-face {
-  font-family: 'RRRClimax';
-  src: url('/assets/fonts/RRRClimax-100.woff2') format('woff2');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src: url('/assets/fonts/PlayfairDisplay-Medium.woff2') format('woff2');
+  font-family: 'hero';
+  src: url("/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal;
 }
 
-@theme {
-  --color-bg: #fcd62c;
-  --color-accent: #ff4d00;
-  --color-text: #000000;
-
-  --font-display: 'RRRClimax', sans-serif;
-  --font-body: 'PlayfairDisplay', serif;
+@font-face {
+  font-family: 'italic-hero';
+  src: url("/assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'header';
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100;
 }
 
+@font-face {
+  font-family: 'italic-header';
+  src: url("/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'body';
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'italic-body';
+  src: url("/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
+/* ROOT */
+:root {
+  /* Colors */
+  --color-background: #FFD400; /* light yellow */
+  --color-accent: #000000; /* black */
+
+
+  /* Typography */
+  --font-hero: 'hero', Helvetica;
+  --font-italic-hero: 'italic-hero', Helvetica;
+  --font-header: 'header', Helvetica;
+  --font-italic-header: 'italic-header', Helvetica;
+  --font-body: 'body', Helvetica;
+  --font-italic-body: 'italic-body', Helvetica;
+  --font-footer: 'footer', Times, Helvetica;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+  --font-size-hero: 4rem;
+
+  /* Spacing */
+  --max-width: 1200px;
+
+
+  /* Layout */
+
+  /* Borders & Radius */
+
+  /* Transitions */
+  
+
+}
+
+/* BASE / RESET */
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-background);
+  accent-color: var(--color-accent);
+}
+
+/* TYPOGRAPHY */
+
+/* LAYOUT */
+
+
+/* NAVBAR */
+nav {
+  font-size: var(--font-size-xl);
+  width: 100%;
+  accent-color: var(--color-accent);
+  align-items: center;
+}
+
+nav a {
+  font-family: var(--font-italic-header);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.nav-container {
+  border: 1px solid red;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+
+  gap: 10rem;
+
+}
+
+/* LANDING */
+.split-container {
+  display: flex;
+}
+
+.hero-text-container {
+  border: 1px solid red;
+  font-family: var(--font-hero);
+  font-size: var(--font-size-hero);
+
+  max-width: var(--max-width);
+  width: 50%;
+
+  display: flex;
+  justify-content: t center;
+
+  margin: 2rem;
+}
+
+.hero-subtext-container {
+  border: 1px solid red;
   font-family: var(--font-body);
+  font-size: var(--font-size-lg);
 }
 
-/* FONTS */
-@font-face {
-  font-family: 'HEADERF';
-  src: url("../../public/fonts/RRRClimax-100.woff2") format("woff2");
-  font-weight: normal;
+/* ABOUT */
+
+/* PROJECTS */
+
+/* BLOG */
+
+/* FOOTER */
+footer {
+  font-family: var(--font-footer);
 }
 
-@font-face {
-  font-family: 'BODYF';
-  src: url("../../public/fonts/") format("woff2");
-  font-weight: normal;
+.footer-container {
+  border: 1px solid red;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
+/* ANIMATIONS */
 
-/* PACKAGES */
-@import "tailwindcss"
-
-/* DESIGN TOKENS */
-
-/* BASE STYLES */
-
-/* TYPOGRAPHY DEFAULTS */
-
-/* GLOBAL LAYOUT */
-
-/* GLOBAL COMPONENT STYLES */
-
-/* ANIMATIONS AND KEYFRAMES */
-
-/* UTILITES */
+/* UTILITIES */
