@@ -18,8 +18,7 @@ export default function About() {
                     <div className='about-right-container'>
                         <div className='about-right'>
                             <p>
-                                Hey! If you missed the massive hero text on the landing page, 
-                                my name is Francisco Vu. I hail from Boston, Massachusetts and 
+                                My name is Francisco Vu. I hail from Boston, Massachusetts and 
                                 received my Bachelor's of Science degree in Computer Science from 
                                 the University of Massachusetts-Boston. 
                             </p>

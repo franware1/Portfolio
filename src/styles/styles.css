@@ -41,8 +41,8 @@
 /* ROOT */
 :root {
   /* Colors */
-  --color-background: #FFD400; /* light yellow */
-  --color-accent: #000000; /* black */
+  --color-background: #ffd500; /* light yellow */
+  --color-accent: #081a44; /* black */
 
 
   /* Typography */
@@ -119,6 +119,8 @@ nav a {
 nav a:hover {
 
   color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: #081a44;
 
 }
 
@@ -128,6 +130,8 @@ nav a:hover {
   display: flex;
   height: 100vh;
   width: 100vw;
+
+  margin: 0;
 
 }
 
@@ -144,12 +148,19 @@ nav a:hover {
 
   font-family: var(--font-hero);
   font-size: var(--font-size-landing-hero);
+  color: #081a44;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  margin: 4rem;
+  margin: 6.5rem;
+
+}
+
+.landing-left p {
+  
+  margin: 0;
 
 }
 
@@ -244,7 +255,7 @@ nav a:hover {
 
 .about-right {
 
-  font-family: var(--font-body);
+  font-family: var(--font);
   font-size: 300%;
 
   display: flex;

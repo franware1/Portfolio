@@ -15,7 +15,6 @@ export default function Landing() {
             <div className="landing-left">
               <p>Hello, My name is Francisco Vu.</p>
               <p><em>YOUR NEXT </em>Software Engineer</p>
-
                 <div className="landing-left-subtext">
                   <p></p>
                 </div>
