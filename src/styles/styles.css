@@ -69,6 +69,7 @@
   /* Layout */
 
   /* Borders & Radius */
+  --radius: 25px;
 
   /* Transitions */
   
@@ -214,9 +215,18 @@ nav a:hover {
 /* ABOUT */
 .about-split-container {
 
+  border-radius: var(--radius);
+  border: 3px solid var(--color-accent) ;
+  margin: 0 auto;
+  margin-top: 2rem;
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  flex-direction: row;
+  align-items: center;
+
+  width: 90%;
+  height: 100%;
+
+  background-color: var(--color-project);
 
 }
 
@@ -268,7 +278,7 @@ nav a:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-content: left;
 
   color: var(--color-accent);
 
@@ -285,6 +295,7 @@ nav a:hover {
 }
 
 .project-container {
+
   border: 3px solid var(--color-accent);
   background-color: var(--color-project);
 }
@@ -359,7 +370,7 @@ nav a:hover {
 /* CONTACT */
 .contact-container {
 
-
+  border-radius: var(--radius);
   border: 3px solid var(--color-accent) ;
   margin: 0 auto;
   margin-top: 6rem;
@@ -397,7 +408,9 @@ nav a:hover {
 
   font-family: var(--font-body);
   font-size: var(--font-size-base);
-  background-color: var(--color-accent);
+  color: #ffffff;
+
+  background-color: var(--color-background);
   border: 2px solid var(--color-accent);
   padding: 0.75rem 1rem;
   outline: none;
@@ -436,7 +449,7 @@ nav a:hover {
 footer {
   color: var(--color-accent);
   font-family: var(--font-footer);
-  margin-top: 90vh; 
+  margin-top: 90vh;
 }
 
 .footer-container {
