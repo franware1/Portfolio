@@ -7,6 +7,7 @@ export default function Projects() {
     return (
         <>
             <Navbar />
+
             <main>
                 <div className="projects-list">
                     <Project
@@ -38,6 +39,7 @@ export default function Projects() {
                     />
                 </div>
             </main>
+            
             <Footer />
         </>
     );

@@ -1,0 +1,87 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'hero';
+  src: url("/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'italic-hero';
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'header';
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'italic-header';
+  src: url("/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 350;
+}
+
+@font-face {
+  font-family: 'body';
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'italic-body';
+  src: url("/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* ROOT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --color-background: #ffffff; /* dark blue is 081a44 */
+  --color-accent: #000000; /* gold is ffd500e5 or white */
+  --color-project: #ffffff; /* sky blue is 6ea1ffe5 */
+
+
+  /* Typography */
+  --font-hero: 'hero', Helvetica;
+  --font-italic-hero: 'italic-hero', Helvetica;
+  --font-header: 'header', Helvetica;
+  --font-italic-header: 'italic-header', Helvetica;
+  --font-body: 'body', Helvetica;
+  --font-italic-body: 'italic-body', Helvetica;
+  --font-footer: 'footer', Times, Helvetica;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.50rem;
+  --font-size-xl: 2rem;
+  --font-size-landing-hero: 7rem;
+  --font-size-about-body: 2rem;
+
+  /* Spacing */
+  --max-width: 1200px;
+
+  /* Borders & Radius */
+  --radius: 25px;
+
+  /* Layout heights */
+  --nav-height: 80px;
+  --footer-height: 60px;
+}
+
+/* BASE / RESET */
+body {
+  background-color: var(--color-background);
+  accent-color: var(--color-accent);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

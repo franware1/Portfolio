@@ -10,12 +10,14 @@ export default function Project({ title, description, tags, githubUrl, liveUrl }
     return (
         <div className="project-container">
             <div className="project">
-                <h2>
-                    {githubUrl
-                        ? <a href={githubUrl} target="_blank" rel="noopener noreferrer">{title}</a>
-                        : title
-                    }
-                </h2>
+                <div className="project-title">
+                    <h2>
+                        {githubUrl
+                            ? <a href={githubUrl} target="_blank" rel="noopener noreferrer">{title}</a>
+                            : title
+                        }
+                    </h2>
+                </div>
 
                 <div className="project-tags">
                     {tags.map((tag) => (

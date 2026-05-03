@@ -2,7 +2,7 @@
   "name": "personal-porfolio",
   "version": "1.0.0",
   "description": "Francisco Vu's Portfolio Webpage.",
-  "main": "index.js",
+  "main": "backend/emailer.js",
   "respository": {
     "type": "git",
     "url": ""
