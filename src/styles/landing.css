@@ -1,5 +1,6 @@
 .landing-split-container {
-  background-color: linear-gradient(#FAB95B, white);
+  /* background: linear-gradient(#FAB95B, white); */
+  background-color: var(--color-background);
 
   display: flex;
   height: calc(100vh - var(--nav-height) - var(--footer-height));

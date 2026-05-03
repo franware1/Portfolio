@@ -1,11 +1,10 @@
 footer {
   color: var(--color-accent);
   font-family: var(--font-footer);
-  margin-top: 90vh;
+  margin-top: auto;
 }
 
 .footer-container {
-  border: 1px solid red;
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;

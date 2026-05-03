@@ -1,5 +1,6 @@
 .projects-list {
   display: flex;
+  min-height: calc(100vh - var(--nav-height) - var(--footer-height));
   flex-direction: column;
   gap: 2rem;
   padding: 4rem 6rem;

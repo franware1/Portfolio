@@ -1,5 +1,6 @@
 .about-split-container {
-  border: 2px solid var(--color-accent);
+
+  /* border: 2px solid var(--color-accent); */
   margin: 0 auto;
   margin-top: 2rem;
   display: flex;
@@ -7,9 +8,10 @@
   align-items: center;
 
   width: 90%;
-  height: 100%;
+  height: calc(100vh - var(--nav-height) - var(--footer-height));
 
   background-color: var(--color-project);
+
 }
 
 .about-left-container {
@@ -32,7 +34,7 @@
 
 .about-left img {
   width: 60%;
-  heigth: auto;
+  height: auto;
 }
 
 .about-right-container {

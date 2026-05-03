@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 
 export default function About() {
     return (
-        <>
+        <div>
             <Navbar />
 
             <main>
@@ -28,6 +28,6 @@ export default function About() {
             </main>
 
             <Footer />
-        </>
+        </div>
     );
 }

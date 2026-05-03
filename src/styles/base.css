@@ -47,8 +47,13 @@
   /* Colors */
   --color-background: #ffffff; /* dark blue is 081a44 */
   --color-accent: #000000; /* gold is ffd500e5 or white */
+
+  --color-landing-background: #FAB95B;
+
   --color-project: #ffffff; /* sky blue is 6ea1ffe5 */
 
+  --color-nav-background: #1A3263;
+  --color-nav-accent: #ffffff;
 
   /* Typography */
   --font-hero: 'hero', Helvetica;
@@ -68,20 +73,24 @@
 
   /* Spacing */
   --max-width: 1200px;
-
   /* Borders & Radius */
   --radius: 25px;
 
   /* Layout heights */
-  --nav-height: 80px;
+  --nav-height: 120px;
   --footer-height: 60px;
+
 }
 
 /* BASE / RESET */
 body {
   background-color: var(--color-background);
   accent-color: var(--color-accent);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  min-height: calc(100vh - var(--nav-height) - var(--footer-height));
 }
