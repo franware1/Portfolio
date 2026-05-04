@@ -1,25 +1,24 @@
 nav {
-
-  /* background: linear-gradient(75deg, #1A3263, #ffffff); */
   accent-color: var(--color-accent);
-  border-bottom: 2px solid black;
+  background-color: var(--color-background);
+  border-bottom: 2px solid var(--color-accent);
 
   font-size: var(--font-size-xl);
 
   width: 100%;
-  height: 120px;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   gap: 20rem;
-
 }
 
 nav a {
   position: relative;
   font-family: var(--font-hero);
-  font-size: 3rem;
-  color: black;
+  font-size: 2rem;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -30,7 +29,7 @@ nav a::after {
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--color-accent);
   opacity: 0;
   transition: opacity 0.4s ease;
 }

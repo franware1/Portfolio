@@ -68,3 +68,22 @@
   font-size: var(--font-size-sm);
   margin: 0;
 }
+
+.contact-socials {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.contact-socials a img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact-socials a:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}

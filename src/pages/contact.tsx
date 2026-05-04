@@ -65,6 +65,14 @@ export default function Contact() {
                         {status === 'success' && <p className="contact-status">Message sent!</p>}
                         {status === 'error' && <p className="contact-status">Something went wrong. Try again.</p>}
                     </form>
+                    <div className="contact-socials">
+                        <a href="https://github.com/franware1" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/icons/github0.svg" alt="GitHub" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/franvu225" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/icons/linkedin0.svg" alt="LinkedIn" />
+                        </a>
+                    </div>
                 </div>
             </main>
             <Footer />

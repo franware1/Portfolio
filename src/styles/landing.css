@@ -16,21 +16,21 @@
   width: 50%;
   flex-direction: column;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 25vh;
 }
 
 .landing-left {
   /* border: 1px solid red; */
   font-family: var(--font-hero);
-  font-size: var(--font-size-landing-hero);
+  font-size: var(--font-size-landing-body);
   color: var(--color-accent);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  margin: 6.5rem;
-  margin-top: 0rem;
+  margin: 5vw;
+  margin-top: 0;
 }
 
 .landing-left p {
@@ -46,12 +46,13 @@
 }
 
 .landing-role {
-
   font-family: var(--font-hero);
   font-size: var(--font-size-landing-hero);
+  line-height: 1.2;
   opacity: 0;
   transition: opacity 0.4s ease;
-
+  height: calc(var(--font-size-landing-hero) * 1.2 * 3);
+  overflow: hidden;
 }
 
 .landing-role--visible {
@@ -78,7 +79,7 @@
 }
 
 .landing-right img {
-  width: 500px;
+  width: clamp(200px, 35vw, 500px);
   height: auto;
 }
 

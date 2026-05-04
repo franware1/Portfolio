@@ -15,7 +15,7 @@ export default function Landing() {
         <div className='landing-split-container'>
           <div className='landing-left-container'>
             <div className="landing-left">
-              <p>Hello! My name is Francisco Vu</p>
+              <p>Hello. My name is Francisco Vu</p>
               <p><em>YOUR NEXT </em></p>
 
               <div className={`landing-role ${visible ? 'landing-role--visible' : ''}`}>
