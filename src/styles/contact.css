@@ -33,7 +33,7 @@
 .contact-form textarea {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
-  color: black;
+  color: var(--color-accent);
 
   background-color: var(--color-background);
   border: 2px solid var(--color-accent);

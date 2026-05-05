@@ -33,7 +33,7 @@ export default function Projects() {
                         title="Portfolio"
                         description="A website dedicated to showcasing Francisco Vu, the software engineer.
                         Links to my GitHub, LinkedIn, project repos, and email are all provided here. 
-                        I used Kubernetes to deploy this website."
+                        Deployed using Railway."
                         tags={["React", "CSS3", "TypeScript", "Nodemailer", "Kubernetes"]}
                         githubUrl='https://github.com/franware1/Portfolio'
                     />
