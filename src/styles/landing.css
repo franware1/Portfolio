@@ -79,8 +79,10 @@
   align-items: center;
 }
 
-.landing-right img {
+.landing-photo-wrap img {
+  margin-left: 5vw;
   width: clamp(200px, 35vw, 500px);
   height: auto;
+  border-radius: var(--radius);
 }
 

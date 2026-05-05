@@ -26,9 +26,10 @@ export default function Landing() {
           </div>
 
           <div className='landing-right-container'>
-            <div className='landing-right'>
+            <div className='landing-photo-wrap'>
               <img src="/public/assets/images/senior-photo.jpg" alt="photo of francisco" />
             </div>
+            
           </div>
         </div>
 
