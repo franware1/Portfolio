@@ -40,7 +40,7 @@ export default function About() {
 
                 <section className="about-hero">
                     <div className="about-photo-wrap">
-                        <img src="/public/assets/images/senior-photo.jpg" alt="Francisco Vu" />
+                        <img src="/assets/images/senior-photo.jpg" alt="Francisco Vu" />
                     </div>
                     <div className="about-intro">
                         <h1>Hi! My name is Francisco Vu and here's a little bit about me...</h1>
