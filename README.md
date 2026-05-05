@@ -1,6 +1,7 @@
 # Francisco Vu — Portfolio
 
-Personal portfolio website built with React, TypeScript, and Vite. Features a Node.js/Express backend with Nodemailer for contact form submissions.
+Personal portfolio website built with React, TypeScript, JS, CSS and Vite. Features a Node.js/Express backend with Nodemailer for contact form submissions. 
+Deployed live at (https://franciscovu.up.railway.app)!
 
 ## Tech Stack
 
