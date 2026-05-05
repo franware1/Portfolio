@@ -49,8 +49,9 @@ export default function About() {
                             I love open source and am always trying to learn something new every day
                             about emerging, cutting edge technology. The tech world is always fast on
                             the move and it is my duty as an engineer to stay up to date! Check out the 
-                            projects tab on this website to learn more about what I have worked on in 
-                            the past!
+                            Projects tab on this website to learn more about what I have worked on in 
+                            the past. And be sure to connect with me via email in the Contact tab which 
+                            also links to my socials!
                         </p>
                     </div>
                 </section>

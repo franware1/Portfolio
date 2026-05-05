@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 25vh;
+  padding-left: 5vw;
 }
 
 .landing-left {
