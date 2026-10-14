@@ -19,8 +19,14 @@ app.use(express.json({ limit: '20kb' }));
 
 const USE_RESEND = Boolean(process.env.RESEND_API_KEY);
 
+// Fail fast instead of hanging for ~2 minutes when the network blocks the connection.
+const SEND_TIMEOUT_MS = 15000;
+
 const transporter = USE_RESEND ? null : nodemailer.createTransport({
     service: 'gmail',
+    connectionTimeout: SEND_TIMEOUT_MS,
+    greetingTimeout: SEND_TIMEOUT_MS,
+    socketTimeout: SEND_TIMEOUT_MS,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -43,6 +49,7 @@ async function sendMail({ subject, html, text, replyTo }) {
                 html,
                 text,
             }),
+            signal: AbortSignal.timeout(SEND_TIMEOUT_MS),
         });
         if (!res.ok) {
             throw new Error(`Resend ${res.status}: ${await res.text()}`);
