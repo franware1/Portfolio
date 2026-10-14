@@ -3,8 +3,9 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 export default function Contact() {
-    const [form, setForm] = useState({ name: '', email: '', message: '' });
+    const [form, setForm] = useState({ name: '', email: '', message: '', website: '' });
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+    const [errorMsg, setErrorMsg] = useState('');
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,6 +14,7 @@ export default function Contact() {
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         setStatus('sending');
+        setErrorMsg('');
 
         try {
             const res = await fetch('/api/contact', {
@@ -21,10 +23,14 @@ export default function Contact() {
                 body: JSON.stringify(form),
             });
 
-            if (!res.ok) throw new Error();
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || 'Something went wrong. Try again.');
+            }
             setStatus('success');
-            setForm({ name: '', email: '', message: '' });
-        } catch {
+            setForm({ name: '', email: '', message: '', website: '' });
+        } catch (err) {
+            setErrorMsg(err instanceof Error && err.message ? err.message : 'Something went wrong. Try again.');
             setStatus('error');
         }
     }
@@ -42,6 +48,7 @@ export default function Contact() {
                             placeholder="Name"
                             value={form.name}
                             onChange={handleChange}
+                            maxLength={100}
                             required
                         />
                         <input
@@ -50,6 +57,7 @@ export default function Contact() {
                             placeholder="Email"
                             value={form.email}
                             onChange={handleChange}
+                            maxLength={254}
                             required
                         />
                         <textarea
@@ -57,13 +65,27 @@ export default function Contact() {
                             placeholder="Message"
                             value={form.message}
                             onChange={handleChange}
+                            maxLength={5000}
                             required
+                        />
+                        {/* Honeypot: hidden from users, catches bots */}
+                        <input
+                            className="contact-hp"
+                            name="website"
+                            type="text"
+                            value={form.website}
+                            onChange={handleChange}
+                            tabIndex={-1}
+                            autoComplete="off"
+                            aria-hidden="true"
                         />
                         <button type="submit" disabled={status === 'sending'}>
                             {status === 'sending' ? 'Sending...' : 'Send'}
                         </button>
-                        {status === 'success' && <p className="contact-status">Message sent!</p>}
-                        {status === 'error' && <p className="contact-status">Something went wrong. Try again.</p>}
+                        <p className="contact-status" role="status" aria-live="polite">
+                            {status === 'success' && "Message sent! I'll get back to you soon."}
+                            {status === 'error' && errorMsg}
+                        </p>
                     </form>
                     <div className="contact-socials">
                         <a href="https://github.com/franware1" target="_blank" rel="noopener noreferrer">

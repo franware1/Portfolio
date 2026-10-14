@@ -87,3 +87,12 @@
   opacity: 1;
   transform: scale(1.1);
 }
+
+/* Honeypot field: kept in the DOM for bots, hidden from people */
+.contact-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0;
+}

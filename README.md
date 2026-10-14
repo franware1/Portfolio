@@ -13,7 +13,7 @@ Deployed live at (https://franciscovu.up.railway.app)!
 
 **Backend**
 - Node.js + Express
-- Nodemailer (Gmail SMTP)
+- Resend HTTPS API (production) or Nodemailer + Gmail SMTP (fallback)
 
 ## Project Structure
 
@@ -25,7 +25,7 @@ portfolio/
 │   └── styles/
 │       └── styles.css
 ├── backend/
-│   └── index.js        # Express server + contact API
+│   └── emailer.js      # Express server + contact API
 └── public/
     └── assets/
 ```
@@ -34,7 +34,7 @@ portfolio/
 
 ### Prerequisites
 - Node.js
-- A Gmail account with an [App Password](https://myaccount.google.com/apppasswords) configured
+- A [Resend](https://resend.com) API key (production), or a Gmail account with an [App Password](https://myaccount.google.com/apppasswords) for local SMTP
 
 ### Installation
 
@@ -55,11 +55,14 @@ cp .env.example .env
 ```
 
 ```
-EMAIL_USER=you@gmail.com
+EMAIL_TO=you@gmail.com          # where messages are delivered
+RESEND_API_KEY=re_...           # if set, Resend is used
+EMAIL_USER=you@gmail.com        # Gmail SMTP fallback
 EMAIL_PASS=your_gmail_app_password
-EMAIL_TO=you@gmail.com
 PORT=3001
 ```
+
+> Railway blocks outbound SMTP on Free/Trial/Hobby plans, so set `RESEND_API_KEY` in production.
 
 ### Development
 
@@ -70,14 +73,14 @@ Run the frontend and backend in separate terminals:
 npm run dev
 
 # Terminal 2 — backend (http://localhost:3001)
-node backend/index.js
+node backend/emailer.js
 ```
 
 ### Production
 
 ```bash
 npm run build
-NODE_ENV=production node backend/index.js
+NODE_ENV=production node backend/emailer.js
 ```
 
 In production, Express serves the built frontend from `dist/` and handles the `/api/contact` endpoint — only one process needed.

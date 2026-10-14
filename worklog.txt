@@ -1,5 +1,37 @@
+CURRENT TECH STACK (as of 2026-10-13)
+─────────────────────────────────────────────
+Frontend:  React 19 + TypeScript, Vite 7, React Router DOM 7
+Styling:   Plain CSS with custom properties (no Tailwind/Bootstrap), split per area
+           in src/styles/ and aggregated by styles.css; local Playfair Display +
+           Open Sans variable fonts; light/dark theme via [data-theme]
+Backend:   Node.js (>=18) + Express 5 (backend/emailer.js). Mail via Resend HTTPS
+           API when RESEND_API_KEY is set, else Nodemailer over Gmail SMTP; cors, dotenv
+Deploy:    Railway (https://franciscovu.up.railway.app). In production one Express
+           process serves dist/ and POST /api/contact
+
+
+2026-10-13
+─────────────────────────────────────────────
+- Generated CLAUDE.md (gitignored) documenting the current stack, features, styling conventions, and known gotchas.
+- Filled in src/styles/responsive.css with breakpoints at 1200px, 900px, 600px, plus a short-viewport (landscape phone) rule:
+  - Nav: reduced link gap and font size, wraps on phones.
+  - Landing: stacks photo above text and centers it at ≤900px; height becomes content-driven.
+  - About: hero stacks photo above intro; badges centered on phones.
+  - Projects: tighter list/card padding, smaller titles on phones.
+  - Contact: replaced fixed 1000×750px box with fluid width and auto height.
+  - Theme toggle: smaller and closer to the corner on phones.
+- Changed .landing-split-container width from 100vw to 100% to stop horizontal scrolling.
+- Finished contact mailer: added Resend HTTPS API (Railway blocks SMTP on non-Pro plans) with Gmail SMTP fallback;
+  input trimming/length/email validation; HTML escaping + plain-text body; honeypot field; per-IP rate limit
+  (5 / 15 min); startup config warnings. Contact form now shows server error messages and has maxLength limits.
+  Updated .env.example, README, and package.json engines (node >=18).
+
+
 2026-04-08
 ─────────────────────────────────────────────
+NOTE: Tailwind CSS and Bootstrap were later removed in favor of plain CSS; the
+font files and Tailwind @theme setup referenced below no longer exist.
+
 - Explored project structure: React 19 + TypeScript + Vite + Tailwind CSS v4 + React Router v7 + Bootstrap 5.
 - Generated CLAUDE.md at project root documenting dev commands and architecture.
 - Fixed broken Bootstrap imports in src/main.tsx (removed ./node_modules/ prefixed paths and duplicate npm imports; Bootstrap already loaded via CDN in index.html).
@@ -10,4 +42,3 @@
 - Adjusted layout: moved nav links to left side, removed "Francisco Vu" header from navbar, removed border separators between navbar/hero/footer.
 - Set all sizing and spacing to viewport-relative units (vw/vh) for fluid scaling.
 - Set consistent horizontal padding of 8vw across all sections for ~1–2 inch page margins.
-
